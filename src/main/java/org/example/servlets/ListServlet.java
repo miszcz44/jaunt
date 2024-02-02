@@ -23,13 +23,7 @@ public class ListServlet extends HttpServlet {
 
     private Connection connection;
     private Statement statement;
-    private String query;
 
-
-    public String createSaveQuery(Product product) {
-        String query1 = "INSERT INTO product(name, price) ('" + product.getName() + "', '" + product.getPrice() +"');";
-        return query1;
-    }
     public void save(Product product) {
 
         String sql = "INSERT INTO product (name, price) VALUES (?, ?)";
